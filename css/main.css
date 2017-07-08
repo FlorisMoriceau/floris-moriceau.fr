@@ -2773,8 +2773,8 @@ Section
 
 .logo {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 250px;
+  height: 75px;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -2783,8 +2783,8 @@ Section
 
 @media (min-width: 768px) {
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 250px;
+    height: 75px;
     top: 30px;
     left: 30px;
   }
