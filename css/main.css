@@ -3183,7 +3183,7 @@ button.wave i:nth-child(3) {
 
 @media (min-width: 768px) {
   .nav-social {
-    bottom: 15px;
+    bottom: 90px;
     right: 20px;
   }
 }
