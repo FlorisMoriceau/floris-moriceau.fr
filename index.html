@@ -3,38 +3,30 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Floris MORICEAU">
-  <link rel="icon" href="img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="">
+  <meta name="author"
+        content="Floris MORICEAU">
+  <link rel="icon"
+        href="img/favicon.ico">
   <title>Floris MORICEAU - Drupal Front-End Developer</title>
   
   <!-- BOOTSTRAP CORE CSS -->
-  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet"
+        href="css/vendor/bootstrap.min.css">
   
   <!-- PLUGIN STYLES FOR THIS TEMPLATE -->
-  <link rel="stylesheet" href="css/vendor/magnific-popup.css">
-  <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet"
+        href="css/vendor/magnific-popup.css">
+  <link rel="stylesheet"
+        href="css/vendor/jquery.mCustomScrollbar.min.css">
   
   <!-- MAIN STYLE FOR THIS TEMPLATE -->
   <link rel="stylesheet" href="css/main.css">
-
-  <!-- Matomo -->
-  <script type="text/javascript">
-    var _paq = _paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//analytics.komuneco.fr/";
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <!-- End Matomo Code -->
 
 </head>
 
@@ -417,6 +409,27 @@
   </div>
 </div>
 <!-- /END RESUME SECTION -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.www.floris-moriceau.fr"]);
+  _paq.push(["setDomains", ["*.www.floris-moriceau.fr"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.komuneco.fr/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.komuneco.fr/piwik.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
 
 <!-- jQuery -->
 <script src="js/vendor/jquery-1.11.3.min.js"></script>
