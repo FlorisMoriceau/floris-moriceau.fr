@@ -1,11 +1,3 @@
-/*
-Theme: RENO
-Author: CSSLoss.com
-Author URI: http://www.cssloss.com/
-Version: 1.0
-=============================================
-*/
-
 (function($) {
     "use strict";
 
@@ -13,75 +5,12 @@ Version: 1.0
      * Window Load
      */
     $(window).on('load', function() {
-
-        /** Loader */
-        var loader = $(".loader");
-        var wHeight = $(window).height();
-        var wWidth = $(window).width();
-        var i = 0;
-
-        /** Center loader on half screen */
-        loader.css({
-            top: wHeight / 2 - 2.5,
-            left: wWidth / 2 - 200
-        })
-
-        do {
-            loader.animate({
-                width: i
-            }, 10)
-            i += 3;
-        } while (i <= 400)
-        if (i === 402) {
-            loader.animate({
-                left: 0,
-                width: '100%'
-            })
-            loader.animate({
-                top: '0',
-                height: '100vh'
-            })
-        }
-
-        /** This line hide loader and show content */
-        setTimeout(function() {
-            $(".loader-wrapper").fadeOut('fast');
-            (loader).fadeOut('fast');
-            /*Set time in milisec */
-        }, 1000);
-
-
         /** Background Image
         ----------------------------*/
         $(".bg-image").each(function() {
-            var $imgPath = $(this).attr('data-image');
+            const $imgPath = $(this).attr('data-image');
             $(this).css('background-image', 'url(' + $imgPath + ')');
         });
-
-        /** Portfolio Isotope */
-        $(".gallery").isotope({
-            itemSelector: '.gallery-item',
-                percentPosition: true,
-        });
-
-        // isotope click function
-        $(".gallery-menu ul li button").on('click', function(e) {
-            e.preventDefault();
-            $(".gallery-menu ul li button").removeClass("active");
-            $(this).addClass("active");
-
-            var selector = $(this).attr('data-filter');
-            $(".gallery").isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false,
-                }
-            });
-            return false;
-        });
-
     });
 
 
@@ -114,56 +43,23 @@ Version: 1.0
 
         /** Progress Bar */
         $(".progress-bar").each(function() {
-            var $imgPath = $(this).attr('data-percent');
+            const $imgPath = $(this).attr('data-percent');
             $(this).css('width', $imgPath + '%');
         });
-
-
-        // magnific popup for portfolio
-        $(".popup-image").magnificPopup({
-            type: 'image',
-        });
-
-        $(".popup-video").magnificPopup({
-            type: 'iframe',
-            iframe: {
-                markup: '<div class="mfp-iframe-scaler">' + '<div class="mfp-close"></div>' + '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' + '</div>',
-
-                patterns: {
-                    youtube: {
-                        index: 'youtube.com/',
-                        id: 'v=',
-                        src: 'http://www.youtube.com/embed/%id%?autoplay=1'
-                    },
-                    vimeo: {
-                        index: 'vimeo.com/',
-                        id: '/',
-                        src: '//player.vimeo.com/video/%id%?autoplay=1'
-                    },
-                    gmaps: {
-                        index: '//maps.google.',
-                        src: '%id%&output=embed'
-                    }
-                },
-
-                srcAction: 'iframe_src',
-            }
-        });
-
 
         /** Contact Form */
         $(".contact-form").on('submit', function(e) {
             e.preventDefault();
-            var name = $("#name").val();
-            var email = $("#email").val();
-            var subject = $("#subject").val();
-            var message = $("#message").val();
-            var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
+            const name = $("#name").val();
+            const email = $("#email").val();
+            const subject = $("#subject").val();
+            const message = $("#message").val();
+            const dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
 
             function isValidEmail(emailAddress) {
-                var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+                const pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
                 return pattern.test(emailAddress);
-            };
+            }
 
             if (isValidEmail(email) && (message.length > 1) && (name.length > 1)) {
                 $.ajax({
