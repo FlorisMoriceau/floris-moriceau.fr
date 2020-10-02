@@ -3866,7 +3866,6 @@ Resume Elements
   bottom:             0;
   left:               0;
   height:             5px;
-  color:              currentColor;
   font-size:          12px;
   background-color:   currentColor;
   -webkit-box-shadow: none;
@@ -3874,9 +3873,11 @@ Resume Elements
 }
 
 .progress-bar .value {
-  position: absolute;
-  right:    0;
-  bottom:   10px;
+  position:         absolute;
+  right:            0;
+  bottom:           10px;
+  color:            currentColor;
+  background-color: #ffffff;
 }
 
 /* Timeline
