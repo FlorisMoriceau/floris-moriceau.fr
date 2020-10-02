@@ -38,8 +38,7 @@ Table of Contents
 /*
 Import Fonts
 ==================================================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 /*
 General
@@ -3420,7 +3419,7 @@ Section
 }
 
 .intro-text h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size:   32px;
   font-weight: 400;
 }
@@ -3668,7 +3667,7 @@ button.wave i:nth-child(3) {
   position:    fixed;
   top:         80px;
   left:        10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   z-index:     3;
 }
 
