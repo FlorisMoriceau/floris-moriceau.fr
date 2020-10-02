@@ -3866,6 +3866,7 @@ Resume Elements
   bottom:             0;
   left:               0;
   height:             5px;
+  color:              currentColor;
   font-size:          12px;
   background-color:   currentColor;
   -webkit-box-shadow: none;
