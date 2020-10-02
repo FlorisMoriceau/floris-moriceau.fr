@@ -81,13 +81,13 @@ img {
 }
 
 a {
-  color: #ff9800;
+  color: #990000;
 }
 
 a:hover,
 a:focus {
   color:           #ff5722;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus {
@@ -3851,7 +3851,7 @@ Resume Elements
 
 .info-list li a:hover,
 .info-list li a:focus {
-  color: #ff9800;
+  color: #990000;
 }
 
 .info-list li span {
