@@ -81,17 +81,21 @@ img {
 }
 
 a {
-  color: #990000;
+  color: #0f31b6;
 }
 
 a:hover,
 a:focus {
-  color:           #ff5722;
+  color:           #002180;
   text-decoration: underline;
 }
 
 a:focus {
   outline: 0;
+}
+
+a:visited {
+  color: #65007a;
 }
 
 ul,
@@ -4009,6 +4013,10 @@ p.send-status .icon {
   font-size:      32px;
   margin-right:   8px;
   vertical-align: middle;
+}
+
+p.send-status.error {
+  color: #990000
 }
 
 p.send-status.success {
