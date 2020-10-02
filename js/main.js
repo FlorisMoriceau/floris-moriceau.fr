@@ -48,7 +48,7 @@ Version: 1.0
             $(".loader-wrapper").fadeOut('fast');
             (loader).fadeOut('fast');
             /*Set time in milisec */
-        }, 1500);
+        }, 1000);
 
 
         /** Background Image

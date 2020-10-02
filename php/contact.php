@@ -15,7 +15,6 @@ if (
     }
   }
 
-  // Replace "yourmail@domain.com" with your email
   mail(
     "floris.moriceau@komuneco.fr",
     $_POST['subject'],
