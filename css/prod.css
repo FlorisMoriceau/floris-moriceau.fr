@@ -48,15 +48,11 @@ body {
   font-family:      'Roboto', sans-serif;
   font-size:        14px;
   line-height:      1.71428572;
-  color:            #333333;
+  color:            #ffffff;
   overflow-x:       hidden;
   position:         relative;
   min-height:       100vh;
-  background-color: #efefef;
-}
-
-body {
-  color: #ffffff;
+  background-color: #333333;
 }
 
 body,
